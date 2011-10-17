@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@color/body_background" >
+	
+	<!-- Header -->
+   <RelativeLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="47dp"
+		android:background="@drawable/bg_header"
+	    android:gravity="center_vertical"
+	    android:layout_alignParentTop="true">
+	    
+	    <ImageView android:id="@+id/imgLogo"
+			android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:background="@null"
+	        android:src="@drawable/logo" />
+	        
+		<ImageButton android:id="@+id/imgbtnAdd"
+			android:background="@null"
+			android:src="@drawable/ic_header_add"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:paddingRight="10dip"
+			android:paddingLeft="10dip"
+			/>
+	</RelativeLayout>
+    
+    <!-- Message -->
+    <RelativeLayout android:id="@+id/relativeMsg"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="#fcebab">
+		<TextView android:id="@+id/tvMsgType"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingTop="6dp"
+			android:paddingBottom="6dp"
+			android:paddingLeft="10dp"
+			android:paddingRight="6dp"
+			android:textColor="#0071c0"
+			android:text="当前模式："/>
+		<TextView android:id="@+id/tvMsgName"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@+id/tvMsgType"
+			android:paddingTop="6dp"
+			android:paddingBottom="6dp"
+			android:paddingRight="5dp"
+			android:textColor="#0071c0"/>
+		<ImageView android:id="@+id/imgbtnMsgEdit"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip"
+			android:src="@drawable/ico_arrow_right" />
+	</RelativeLayout>
+    
+    <!-- ProfileList -->
+	<LinearLayout  
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="horizontal">
+		<ListView android:id="@+id/profileList" 
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="#ffffff"
+			android:cacheColorHint="#00000000"
+    		android:fadingEdge="none"
+    		android:fadeScrollbars="true"
+    		android:dividerHeight="1dip"
+    		android:fastScrollEnabled="true" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:background="@color/body_background" android:layout_height="match_parent">
+
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="47dp"
+		android:background="@drawable/bg_header"
+	    android:gravity="center_vertical"
+	    android:layout_alignParentTop="true">
+	    
+	    <ImageButton android:id="@+id/imgbtnBack"
+			android:background="@null"
+			android:src="@drawable/ic_header_back"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_alignParentLeft="true"
+			android:paddingRight="10dip"
+			android:paddingLeft="10dip" />
+			
+	    <TextView android:id="@+id/tvTitle"
+			android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_toLeftOf="@+id/imgbtnSave"
+	        android:layout_toRightOf="@+id/imgbtnBack"
+	        android:layout_marginLeft="3dp"
+	        android:background="@null"
+	        android:gravity="center_vertical|center"
+	        android:textSize="18dp"
+	        android:textColor="#ffffff"
+	        android:text="新建" />
+	        
+		<ImageButton android:id="@+id/imgbtnSave"
+			android:background="@null"
+			android:src="@drawable/ic_header_save"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:layout_alignParentRight="true"
+			android:paddingRight="10dip"
+			android:paddingLeft="10dip"
+			/>
+	</RelativeLayout>
+
+	<ScrollView android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@drawable/bg_main">
+		
+		<LinearLayout 
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content" 
+			android:orientation="vertical"
+			android:padding="5dp" >
+			
+			<!-- 情景模式名称 -->
+			<RelativeLayout android:id="@+id/relativeName"
+				android:layout_width="match_parent"
+				android:layout_height="48dip"
+				android:layout_marginTop="5dip"
+				android:layout_marginBottom="5dip" 
+				android:background="@drawable/corners_border" >
+				<ImageView android:id="@+id/imgPic"
+					android:layout_alignParentLeft="true"
+					android:layout_centerVertical="true"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:src="@drawable/icon_1" />
+				<TextView
+					android:id="@+id/tvName"
+					android:gravity="center_vertical|left"
+					android:layout_toRightOf="@+id/imgPic"
+					android:layout_toLeftOf="@+id/imgArrow"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:textSize="20dip"
+					android:text="情景模式名称"
+					android:textColor="#393839"
+					android:ellipsize="marquee"
+					android:singleLine="true" />
+				<ImageView android:id="@+id/imgArrow"
+					android:layout_alignParentRight="true"
+					android:layout_centerVertical="true"
+					android:layout_width="wrap_content"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="10dip"
+					android:layout_marginRight="10dip"
+					android:src="@drawable/ico_arrow_right" />
+			</RelativeLayout>
+			
+			<!-- 音量、震动 -->
+			<LinearLayout 
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" 
+				android:orientation="vertical"
+				android:layout_marginTop="5dip"
+				android:layout_marginBottom="5dip"
+				android:background="@drawable/corners_border"  >
+				
+				<!-- 铃声音量 -->
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="48dip"
+					android:id="@+id/relativeAudioRing"  >
+					<ImageView android:id="@+id/imgarrow"
+						android:layout_alignParentRight="true"
+						android:layout_centerVertical="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:layout_marginRight="10dip"
+						android:src="@drawable/ico_arrow_right" />
+					<ImageView android:id="@+id/imgAudioRing"
+						android:layout_toLeftOf="@+id/imgarrow"
+						android:layout_centerVertical="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:visibility="gone"
+						android:src="@drawable/ic_volume" />
+					<TextView  android:id="@+id/tvAudioRing"
+						android:gravity="center_vertical|right"
+						android:layout_toLeftOf="@+id/imgAudioRing"
+	    				android:layout_toRightOf="@+id/icon_left"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:textSize="14dip"
+						android:visibility="gone"
+						android:textColor="#393839" />
+					<TextView
+						android:id="@+id/icon_left"
+						android:gravity="center_vertical|right"
+						android:layout_alignParentLeft="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:textSize="18dip"
+						android:text="铃声音量"
+						android:textColor="#737173" />
+				</RelativeLayout>
+				
+				<!-- 通话音量 -->
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="48dip"
+					android:id="@+id/relativeAudioCall"  >
+					<ImageView android:id="@+id/imgArrow"
+						android:layout_alignParentRight="true"
+						android:layout_centerVertical="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:layout_marginRight="10dip"
+						android:src="@drawable/ico_arrow_right" />
+					<ImageView android:id="@+id/imgAudioCall"
+						android:layout_toLeftOf="@+id/imgArrow"
+						android:layout_centerVertical="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:visibility="gone"
+						android:src="@drawable/ic_volume" />
+					<TextView  android:id="@+id/tvAudioCall"
+						android:gravity="center_vertical|right"
+						android:layout_toLeftOf="@+id/imgAudioCall"
+	    				android:layout_toRightOf="@+id/icon_left"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:visibility="gone"
+						android:textSize="14dip"
+						android:textColor="#393839" />
+					<TextView
+						android:id="@+id/icon_left"
+						android:gravity="center_vertical|right"
+						android:layout_alignParentLeft="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:textSize="18dip"
+						android:text="通话音量"
+						android:textColor="#737173" />
+				</RelativeLayout>
+				
+				<!-- 闹钟音量 -->
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="48dip"
+					android:id="@+id/relativeAudioAlarm"  >
+					<ImageView android:id="@+id/imgArrow"
+						android:layout_alignParentRight="true"
+						android:layout_centerVertical="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:layout_marginRight="10dip"
+						android:src="@drawable/ico_arrow_right" />
+					<ImageView android:id="@+id/imgAudioAlarm"
+						android:layout_toLeftOf="@+id/imgArrow"
+						android:layout_centerVertical="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:visibility="gone"
+						android:src="@drawable/ic_volume" />
+					<TextView  android:id="@+id/tvAudioAlarm"
+						android:gravity="center_vertical|right"
+						android:layout_toLeftOf="@+id/imgAudioAlarm"
+	    				android:layout_toRightOf="@+id/icon_left"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:visibility="gone"
+						android:textSize="14dip"
+						android:textColor="#393839" />
+					<TextView
+						android:id="@+id/icon_left"
+						android:gravity="center_vertical|right"
+						android:layout_alignParentLeft="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:textSize="18dip"
+						android:text="闹钟音量"
+						android:textColor="#737173" />
+				</RelativeLayout>
+				
+				<!-- 媒体音量 -->
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="48dip"
+					android:id="@+id/relativeAudioMusic"  >
+					<ImageView android:id="@+id/imgArrow"
+						android:layout_alignParentRight="true"
+						android:layout_centerVertical="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:layout_marginRight="10dip"
+						android:src="@drawable/ico_arrow_right" />
+					<ImageView android:id="@+id/imgAudioMusic"
+						android:layout_toLeftOf="@+id/imgArrow"
+						android:layout_centerVertical="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:visibility="gone"
+						android:src="@drawable/ic_volume" />
+					<TextView  android:id="@+id/tvAudioMusic"
+						android:gravity="center_vertical|right"
+						android:layout_toLeftOf="@+id/imgAudioMusic"
+	    				android:layout_toRightOf="@+id/icon_left"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:visibility="gone"
+						android:textSize="14dip"
+						android:textColor="#393839" />
+					<TextView
+						android:id="@+id/icon_left"
+						android:gravity="center_vertical|right"
+						android:layout_alignParentLeft="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:textSize="18dip"
+						android:text="媒体音量"
+						android:textColor="#737173" />
+				</RelativeLayout>
+				
+				<View android:layout_width="match_parent" android:layout_height="1dip" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:background="@drawable/dashed_line" />
+				
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="48dip"
+					android:id="@+id/relativeVibrator" >
+					<ImageView android:id="@+id/profile_item_arrow"
+						android:layout_alignParentRight="true"
+						android:layout_centerVertical="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:layout_marginRight="10dip"
+						android:src="@drawable/ico_arrow_right" />
+					<TextView android:id="@+id/tvVibrator"
+						android:gravity="center_vertical|right"
+						android:layout_toLeftOf="@+id/profile_item_arrow"
+	    				android:layout_toRightOf="@+id/icon_left"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:textSize="14dip"
+						android:textColor="#393839" />
+					<TextView
+						android:id="@+id/icon_left"
+						android:gravity="center_vertical|right"
+						android:layout_alignParentLeft="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:textSize="18dip"
+						android:text="振动"
+						android:textColor="#737173" />
+				</RelativeLayout>
+			</LinearLayout>
+			
+			<!-- WIFI、蓝牙 -->
+			<LinearLayout 
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" 
+				android:orientation="vertical"
+				android:padding="5dp"
+				android:layout_marginTop="5dip"
+				android:layout_marginBottom="5dip" 
+				android:background="@drawable/corners_border" >
+				
+				
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="48dip"
+					android:id="@+id/relativeAirplane" >
+					<ImageView android:id="@+id/profile_item_arrow"
+						android:layout_alignParentRight="true"
+						android:layout_centerVertical="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:layout_marginRight="10dip"
+						android:src="@drawable/ico_arrow_right" />
+					<TextView android:id="@+id/tvAirplane"
+						android:gravity="center_vertical|right"
+						android:layout_toLeftOf="@+id/profile_item_arrow"
+	    				android:layout_toRightOf="@+id/icon_left"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:textSize="14dip"
+						android:textColor="#393839" />
+					<TextView
+						android:id="@+id/icon_left"
+						android:gravity="center_vertical|right"
+						android:layout_alignParentLeft="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:textSize="18dip"
+						android:text="飞行模式"
+						android:textColor="#737173" />
+				</RelativeLayout>
+				
+				<View android:layout_width="match_parent" android:layout_height="1dip" android:background="@drawable/dashed_line" />
+				
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="48dip"
+					android:id="@+id/relativeWifi" >
+					<ImageView android:id="@+id/profile_item_arrow"
+						android:layout_alignParentRight="true"
+						android:layout_centerVertical="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:layout_marginRight="10dip"
+						android:src="@drawable/ico_arrow_right" />
+					<TextView android:id="@+id/tvWifi"
+						android:gravity="center_vertical|right"
+						android:layout_toLeftOf="@+id/profile_item_arrow"
+	    				android:layout_toRightOf="@+id/icon_left"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:textSize="14dip"
+						android:textColor="#393839" />
+					<TextView
+						android:id="@+id/icon_left"
+						android:gravity="center_vertical|right"
+						android:layout_alignParentLeft="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:textSize="18dip"
+						android:text="Wi-Fi开关"
+						android:textColor="#737173" />
+				</RelativeLayout>
+				
+				<View android:layout_width="match_parent" android:layout_height="1dip" android:background="@drawable/dashed_line" />
+				
+				<RelativeLayout
+					android:layout_width="match_parent"
+					android:layout_height="48dip"
+					android:id="@+id/relativeBluetooth" >
+					<ImageView android:id="@+id/profile_item_arrow"
+						android:layout_alignParentRight="true"
+						android:layout_centerVertical="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:layout_marginRight="10dip"
+						android:src="@drawable/ico_arrow_right" />
+					<TextView android:id="@+id/tvBluetooth"
+						android:gravity="center_vertical|right"
+						android:layout_toLeftOf="@+id/profile_item_arrow"
+	    				android:layout_toRightOf="@+id/icon_left"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:textSize="14dip"
+						android:textColor="#393839" />
+					<TextView
+						android:id="@+id/icon_left"
+						android:gravity="center_vertical|right"
+						android:layout_alignParentLeft="true"
+						android:layout_width="wrap_content"
+						android:layout_height="match_parent"
+						android:layout_marginLeft="10dip"
+						android:textSize="18dip"
+						android:text="蓝牙开关"
+						android:textColor="#737173" />
+				</RelativeLayout>
+				
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>

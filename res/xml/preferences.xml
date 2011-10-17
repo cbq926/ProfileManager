@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="显示">
+		<ListPreference 
+			android:key="order" 
+			android:title="@string/pref_order"
+			android:defaultValue="createTime DESC" 
+			android:entries="@array/order_entry"
+			android:entryValues="@array/order_value" 
+			android:dialogTitle="@string/pref_order" />
+		<CheckBoxPreference 
+			android:key="notif"
+        	android:title="@string/pref_notif" 
+        	android:summary="在顶部通知栏显示图标"
+        	android:defaultValue="true" />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="声音">
+		<ListPreference 
+			android:key="sound" 
+			android:title="@string/pref_sound"
+			android:defaultValue="2"
+			android:entries="@array/sound_entry"
+			android:entryValues="@array/sound_value" 
+			android:dialogTitle="@string/pref_sound" />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="关于">
+		<PreferenceScreen  
+			android:key="about" 
+			android:title="@string/pref_about"
+			android:summary="关于 情景模式(Profile Manager)" />
+	</PreferenceCategory>
+</PreferenceScreen>

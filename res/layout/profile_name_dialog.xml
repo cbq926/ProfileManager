@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" 
+	android:layout_width="match_parent" 
+	android:layout_height="wrap_content"
+	android:background="@color/body_background" >
+	<RelativeLayout 
+		android:layout_width="match_parent" 
+		android:layout_height="wrap_content" 
+		android:layout_marginTop="10dp"
+		android:layout_marginRight="5dp"
+		android:layout_marginBottom="5dp">
+		<FrameLayout 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/layoutPic">
+			<ImageView android:id="@+id/imgPic"
+				android:layout_height="48dp"
+				android:layout_width="wrap_content"
+				android:src="@drawable/icon_1" />
+		</FrameLayout>
+		
+		<EditText android:id="@+id/txtName"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_toRightOf="@+id/layoutPic"
+			android:layout_marginTop="2dp"
+			android:scrollHorizontally="true"
+			android:autoText="false"
+			android:capitalize="words"
+			android:gravity="fill_horizontal"
+			android:ems="10"
+			android:singleLine="true" 
+			android:selectAllOnFocus="true"
+			android:hint="情景模式名称" />
+	</RelativeLayout>
+
+	<View android:layout_width="match_parent" android:layout_height="1dip" android:layout_marginLeft="5dp" android:layout_marginRight="5dp" android:background="@drawable/dashed_line" />
+				
+	<HorizontalScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp" >
+		<LinearLayout android:id="@+id/layoutPicChoice"
+			android:layout_width="match_parent" 
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+		</LinearLayout>
+	</HorizontalScrollView>
+	
+	<LinearLayout
+			android:orientation="horizontal" 
+			android:layout_width="match_parent"
+			android:layout_height="48dip" 
+			android:layout_alignParentBottom="true"
+			android:padding="5dip" 
+			android:baselineAligned="false">
+			<Button android:id="@+id/btnOk"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" 
+				android:layout_marginRight="5dip"
+				android:text="保存" 
+				android:textStyle="bold" 
+				android:layout_weight="1" />
+			<Button android:id="@+id/btnCancel"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent" 
+				android:layout_marginLeft="5dip"
+				android:text="取消" 
+				android:layout_weight="1" />
+		</LinearLayout>
+</LinearLayout>

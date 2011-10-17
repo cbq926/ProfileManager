@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.mycreat.profilemanager"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="8" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    
+    <!-- <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/> --> 
+    
+    <application android:icon="@drawable/icon" android:label="@string/app_name">
+        <activity android:name="com.mycreat.profilemanager.activity.ProfileListActivity"
+                  android:label="@string/app_name"
+                  android:theme="@style/NoTitle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <receiver android:name="com.mycreat.profilemanager.receiver.BootBroadcastReceiver"> 
+			<intent-filter> 
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter> 
+		</receiver>
+		
+        <activity android:name="com.mycreat.profilemanager.activity.ProfileActivity"
+                  android:label="@string/app_name"
+                  android:theme="@style/NoTitle">
+        </activity>
+        
+        <activity android:name="com.mycreat.profilemanager.activity.PreferencesActivity">  
+        </activity> 
+
+        <service android:name="com.mycreat.profilemanager.service.ProfileService">
+        </service>
+        
+        <meta-data android:value="4e97d87b5270157f7800007b" android:name="UMENG_APPKEY" />
+
+    </application>
+</manifest>
