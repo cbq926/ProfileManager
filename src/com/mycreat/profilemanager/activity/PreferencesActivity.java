@@ -109,6 +109,7 @@ public class PreferencesActivity extends PreferenceActivity {
 				});
 	}
 	
+	/*
     @Override 
     public void onResume() {
     	super.onResume();
@@ -120,4 +121,5 @@ public class PreferencesActivity extends PreferenceActivity {
     	super.onPause();
     	MobclickAgent.onPause(this);
     }
+    */
 }

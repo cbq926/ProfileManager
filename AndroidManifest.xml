@@ -15,6 +15,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
     
     <!-- <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/> --> 
     
@@ -45,8 +46,7 @@
 
         <service android:name="com.mycreat.profilemanager.service.ProfileService">
         </service>
-        
-        <meta-data android:value="4e97d87b5270157f7800007b" android:name="UMENG_APPKEY" />
-
+		
+        <meta-data android:value="4e97d87b5270157f7800007b" android:name="UMENG_APPKEY"></meta-data>
     </application>
 </manifest>

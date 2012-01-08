@@ -405,6 +405,7 @@ public class ProfileListActivity extends Activity {
         return super.onMenuItemSelected(featureId, item);  
     } 
     
+    /*
     @Override 
     public void onResume() {
     	super.onResume();
@@ -416,6 +417,7 @@ public class ProfileListActivity extends Activity {
     	super.onPause();
     	MobclickAgent.onPause(this);
     }
+    */
 }
 
 /**

@@ -658,6 +658,7 @@ public class ProfileActivity extends Activity {
         return false; 
     }
     
+    /*
     @Override 
     public void onResume() {
     	super.onResume();
@@ -669,4 +670,5 @@ public class ProfileActivity extends Activity {
     	super.onPause();
     	MobclickAgent.onPause(this);
     }
+    */
 }
