@@ -125,12 +125,6 @@ public final class R {
         public static final int imgAudioCall=0x7f09000f;
         public static final int imgAudioMusic=0x7f090015;
         public static final int imgAudioRing=0x7f09000b;
-        public static final int imgFlagAirplane=0x7f090032;
-        public static final int imgFlagBluetooth=0x7f090034;
-        public static final int imgFlagVibrator=0x7f090031;
-        public static final int imgFlagVolumeOff=0x7f09002f;
-        public static final int imgFlagVolumeOn=0x7f090030;
-        public static final int imgFlagWifi=0x7f090033;
         public static final int imgLogo=0x7f090026;
         public static final int imgNotif_icon=0x7f090000;
         public static final int imgPic=0x7f090006;
@@ -139,8 +133,9 @@ public final class R {
         public static final int imgbtnBack=0x7f090002;
         public static final int imgbtnMsgEdit=0x7f09002b;
         public static final int imgbtnSave=0x7f090004;
-        public static final int layoutPic=0x7f090035;
-        public static final int layoutPicChoice=0x7f090037;
+        public static final int layoutPic=0x7f090030;
+        public static final int layoutPicChoice=0x7f090032;
+        public static final int profileFlag_layout=0x7f09002f;
         public static final int profileList=0x7f09002c;
         public static final int profile_item_arrow=0x7f090018;
         public static final int profile_layout=0x7f09002d;
@@ -169,7 +164,7 @@ public final class R {
         public static final int tvVibrator=0x7f090019;
         public static final int tvVolume=0x7f090023;
         public static final int tvWifi=0x7f09001d;
-        public static final int txtName=0x7f090036;
+        public static final int txtName=0x7f090031;
         public static final int your_dialog_root_element=0x7f090020;
     }
     public static final class layout {

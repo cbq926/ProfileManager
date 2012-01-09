@@ -40,48 +40,14 @@
 			android:ellipsize="marquee"
 			android:singleLine="true" />
 		
-		<LinearLayout
+		<!-- flag -->
+		<LinearLayout android:id="@+id/profileFlag_layout"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
 			android:orientation="horizontal"
 			android:layout_below="@+id/tvName"
 			android:layout_marginTop="5dp" >
-			<ImageView android:id="@+id/imgFlagVolumeOff"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:src="@drawable/ic_flag_volume_off"
-				android:paddingRight="10dp"
-				android:visibility="gone" />
-			<ImageView android:id="@+id/imgFlagVolumeOn"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:src="@drawable/ic_flag_volume_on"
-				android:paddingRight="10dp"
-				android:visibility="gone" />
-			<ImageView android:id="@+id/imgFlagVibrator" 
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:src="@drawable/ic_flag_vibrate"
-				android:paddingRight="10dp"
-				android:visibility="gone" />
-			<ImageView android:id="@+id/imgFlagAirplane"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:src="@drawable/ic_flag_airplane"
-				android:paddingRight="10dp"
-				android:visibility="gone" />
-			<ImageView android:id="@+id/imgFlagWifi"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:src="@drawable/ic_flag_wifi"
-				android:paddingRight="10dp"
-				android:visibility="gone" />
-			<ImageView android:id="@+id/imgFlagBluetooth"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:src="@drawable/ic_flag_bluetooth"
-				android:paddingRight="10dp"
-				android:visibility="gone" />
 		</LinearLayout>
+	
 	</LinearLayout>
 </LinearLayout>

@@ -31,9 +31,11 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.CursorAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.AdapterView.OnItemClickListener;
@@ -54,6 +56,7 @@ public class ProfileListActivity extends Activity {
 	public static final int ACTIVITY_PREF = 1;
 	
 	ListView lvProfileList;
+	ListView lvProfileList2;
 	TextView tvMsgName;
 	RelativeLayout relativeMsg;
 	ArrayAdapter<String> adapter;
@@ -476,13 +479,48 @@ class myCursorAdapter extends CursorAdapter{
 	@Override
 	public void bindView(View view, Context context, Cursor cursor) {
         ((TextView) view.findViewById(R.id.tvName)).setText(cursor.getString(ProfileColumns.PROFILE_COL_NAME));
-        ((ImageView) view.findViewById(R.id.imgPic)).setImageResource((context.getResources()).getIdentifier("icon_" + cursor.getInt(ProfileColumns.PROFILE_COL_PIC), "drawable", "com.mycreat.profilemanager"));
-        if (cursor.getInt(ProfileColumns.PROFILE_COL_AUDIO_RING) == 0) ((ImageView) view.findViewById(R.id.imgFlagVolumeOff)).setVisibility(View.VISIBLE);
-        else if (cursor.getInt(ProfileColumns.PROFILE_COL_AUDIO_RING) > 0) ((ImageView) view.findViewById(R.id.imgFlagVolumeOn)).setVisibility(View.VISIBLE);
-        if (cursor.getInt(ProfileColumns.PROFILE_COL_VIBRATOR) == 1) ((ImageView) view.findViewById(R.id.imgFlagVibrator)).setVisibility(View.VISIBLE);
-        if (cursor.getInt(ProfileColumns.PROFILE_COL_AIRPLANE) == 1) ((ImageView) view.findViewById(R.id.imgFlagAirplane)).setVisibility(View.VISIBLE);
-        if (cursor.getInt(ProfileColumns.PROFILE_COL_WIFI) == 1) ((ImageView) view.findViewById(R.id.imgFlagWifi)).setVisibility(View.VISIBLE);
-        if (cursor.getInt(ProfileColumns.PROFILE_COL_BLUETOOTH) == 1) ((ImageView) view.findViewById(R.id.imgFlagBluetooth)).setVisibility(View.VISIBLE);
+        ((ImageView) view.findViewById(R.id.imgPic)).setImageResource((context.getResources()).getIdentifier("icon_" + cursor.getInt(ProfileColumns.PROFILE_COL_PIC), "drawable", "com.mycreat.profilemanager"));        
+        
+        LinearLayout ll = ((LinearLayout) view.findViewById(R.id.profileFlag_layout));
+        ll.removeAllViews();
+
+        if (cursor.getInt(ProfileColumns.PROFILE_COL_AUDIO_RING) == 0) {
+        	ImageView ii = new ImageView(context);
+            ii.setImageResource(R.drawable.ic_flag_volume_off);
+            ii.setPadding(0, 0, 10, 0);
+            ll.addView(ii);
+        } else if (cursor.getInt(ProfileColumns.PROFILE_COL_AUDIO_RING) > 0) {
+        	ImageView ii = new ImageView(context);
+            ii.setImageResource(R.drawable.ic_flag_volume_on);
+            ii.setPadding(0, 0, 10, 0);
+            ll.addView(ii);
+        }
+        if (cursor.getInt(ProfileColumns.PROFILE_COL_VIBRATOR) == 1) {
+        	ImageView ii = new ImageView(context);
+            ii.setImageResource(R.drawable.ic_flag_vibrate);
+            ii.setPadding(0, 0, 10, 0);
+            ll.addView(ii);
+        }
+        if (cursor.getInt(ProfileColumns.PROFILE_COL_AIRPLANE) == 1) {
+        	ImageView ii = new ImageView(context);
+            ii.setImageResource(R.drawable.ic_flag_airplane);
+            ii.setPadding(0, 0, 10, 0);
+            ll.addView(ii);
+        }
+        if (cursor.getInt(ProfileColumns.PROFILE_COL_WIFI) == 1) {
+        	ImageView ii = new ImageView(context);
+            ii.setImageResource(R.drawable.ic_flag_wifi);
+            ii.setPadding(0, 0, 10, 0);
+            ll.addView(ii);
+        }
+        if (cursor.getInt(ProfileColumns.PROFILE_COL_BLUETOOTH) == 1) {
+        	ImageView ii = new ImageView(context);
+            ii.setImageResource(R.drawable.ic_flag_bluetooth);
+            ii.setPadding(0, 0, 10, 0);
+            ll.addView(ii);
+        }
+		
+        //Log.d("当前方案", "------------" + cursor.getInt(ProfileColumns.PROFILE_COL_ISACTIVE));
 	}
 
 	@Override
