@@ -3,6 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
-	<classpathentry kind="lib" path="G:/下载/Analytics_Android_SDK_3.1.1/Umeng Analytics Android SDK V3.1.1/AndroidAnalyticSDK3.1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/cbq926/Program/Android/Umeng/AndroidAnalyticSDK3.1.1.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
